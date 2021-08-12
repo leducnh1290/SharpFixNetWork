@@ -11,13 +11,13 @@ import androidx.annotation.RequiresApi;
 public class ServiceStatusBar extends TileService {
     @Override
     public void onTileAdded() {
-        Log.d ("Trang thai", "Them");
+        Log.d ("Status", "Add");
         getSharedPreferences ("Status", MODE_PRIVATE).edit ().putBoolean ("status", true).commit ();
     }
 
     @Override
     public void onTileRemoved() {
-        Log.d ("Trang thai", "Xoa");
+        Log.d ("Status", "Removed");
         getSharedPreferences ("Status", MODE_PRIVATE).edit ().putBoolean ("status", false).commit ();
     }
 
